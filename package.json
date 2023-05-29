@@ -1,0 +1,19 @@
+{
+  "name": "tictactoecode",
+  "version": "1.0.0",
+  "description": "TicTacToe Game",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Awsome",
+    "Game"
+  ],
+  "author": "Kunal",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "slugify": "^1.6.6"
+  }
+}
