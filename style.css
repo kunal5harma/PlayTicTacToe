@@ -53,11 +53,11 @@ nav ul {
 }
 
 .box:hover {
-    background-color: rgb(217, 180, 252);
+    background-color: rgb(201, 153, 246);
 }
 
 .gameInfo {
-    padding: 0 34px;
+    padding: 0 14px;
 }
 
 .gameInfo h1 {
@@ -89,9 +89,9 @@ nav ul {
     border-right: none;
 }
 
-#reset {
-    margin: 0 23px;
-    padding: 1px 18px;
+.reset {
+    margin: 0 25px;
+    padding: 1px 10px;
     border-radius: 6px;
     cursor: pointer;
     font-weight: bold;
@@ -99,8 +99,20 @@ nav ul {
     font-size: 16px;
 }
 
-#reset:hover {
-    background-color: rgb(217, 180, 252);
+.reset:hover {
+    background-color: rgb(201, 153, 246);
+}
+
+.bi {
+    position: relative;
+    font-size: 30px;
+    align-self: center;
+    cursor: pointer;
+    top: 5px;
+}
+
+.bi:hover {
+    color: rgb(201, 153, 246);
 }
 
 .line {
