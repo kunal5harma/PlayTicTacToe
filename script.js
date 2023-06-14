@@ -27,6 +27,7 @@ const checkWin = () => {
         if ((boxtext[e[0]].innerText === boxtext[e[1]].innerText) && (boxtext[e[2]].innerText === boxtext[e[1]].innerText) && (boxtext[e[0]].innerText !== "")) {
             document.querySelector('.info').innerText = boxtext[e[0]].innerText + " Won"
             isgameover = true
+            gameover.play()
             document.querySelector('.imgbox').getElementsByTagName('img')[0].style.width = "200px";
             document.querySelector(".line").style.transform = `translate(${e[3]}vw, ${e[4]}vw) rotate(${e[5]}deg)`
             document.querySelector(".line").style.width = "20vw";
@@ -35,7 +36,8 @@ const checkWin = () => {
 }
 
 // Game Logic
-music.play();
+
+
 let boxes = document.getElementsByClassName("box");
 Array.from(boxes).forEach(element => {
     let boxtext = element.querySelector('.boxtext');
@@ -63,5 +65,20 @@ reset.addEventListener('click', () => {
     document.querySelector(".line").style.width = "0vw";
     document.getElementsByClassName("info")[0].innerText = "Turn for " + turn;
     document.querySelector('.imgbox').getElementsByTagName('img')[0].style.width = "0px"
+})
+
+start.addEventListener('click', () => {
+    if (music.paused) {
+        music.play();
+        start.classList.remove('bi-volume-up-fill');
+        start.classList.add('bi-volume-mute-fill');
+        gif.style.opacity = 1;
+    }
+    else {
+        music.pause();
+        start.classList.remove('bi-volume-mute-fill');
+        start.classList.add('bi-volume-up-fill');
+        gif.style.opacity = 0;
+    }
 })
 
